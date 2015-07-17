@@ -6,7 +6,7 @@ AlbCopDay = daystart
 grupTipe[23] = -10
 Chernov = 10
 gs 'stat'
-'You walk down the street and see Albina Barlovskuyu. Near it stops the machine out people run out and put her face to the ground setting the stage for her hands behind her back and putting handcuffs. Albina outraged, but it shows the documents for her arrest for running a brothel. After a search of her rise to their feet and literally zashvyrivayut in police car, then take away.'
+'You walk down the street when you see Albina Barlovskaya.. All of a sudden a Police Van stops near her and out of it run people dressed in black suits and put her face to the ground forcing her hands behind her back and putting her on handcuffs. Albina is outraged, but one of the men shows her the documents for her arrest for running a brothel. After a body search, they raise her to her feet and literally drag her in the police car and speed away.'
 
 act 'Leave':gt 'gorodok'
 
