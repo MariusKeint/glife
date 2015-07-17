@@ -86,14 +86,14 @@ act 'Go with Chernov':
 				cls
 				minut += 1
 				gs 'stat'
-				'You asked what was so important with Albina, that  had the security service searching this case instead of the police. Captain grinned and replied "I underestimated you, you''re a smart girl. Okay, I''ll play my cards straight with you instead.  Do you know who the father of Albina is? Barlovsky Boris, a retired police colonel. He served as chief of police in this very town.He is supposed to be retired now, but still has a great many connections with the police. "'
+				'You asked what was so important with Albina, that  had the security service searching this case instead of the police.The captain grinned and replied "I underestimated you, you''re a smart girl. Okay, I''ll play my cards straight with you then.  Do you know who the father of Albina is? Barlovsky Boris, a retired police colonel. He served as chief of the police in this very town.He is supposed to be retired now, but still has a great many connections with the police. "'
 
 				if intel >= 75:
 					act 'Tell him that he still hasn't answered your question':
 						cls
 						minut += 1
 						gs 'stat'
-						'You told the captain that he still had not answered the question, why now sudden interest in the affairs of Albina from the security service. The captain nodded, "It''s very simple. Albina''s father decided to go into politics and is running for mayor of this town. There are certain 'elements' that want to stop him. What  better way than arresting his daughter as a criminal engaged in a prostitution."'
+						'You told the captain that he still had not answered the question, why the sudden interest in the affairs of Albina from the security service. The captain nodded, "It''s very simple. Albina''s father decided to go into politics and is running for mayor of this town. There are certain 'elements' that want to stop him. What  better way than arresting his daughter as a criminal engaged in a prostitution."'
 						dynamic $din_zajava_albfather
 						dynamic $din_zajava_albfather_no
 					end
