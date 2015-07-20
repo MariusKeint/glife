@@ -5,14 +5,14 @@ $din_zajava_albfather = {
 		minut += 1
 		AlbFather = 2
 		gs 'stat'
-		'You have agreed to write a statement, Captain quite nodded. "You''re a smart girl and choose the right side. Come to me in the car, everything is there to arrange quick."'
+		'The captain nodded in satisfaction when you agreed to write a statement. "You're a smart girl and chose the right side. Come with me in the car, all the paperwork is there to arrange this quickly." '
 
 		act 'Go with Chernov':
 			cls
 			minut += 1
 			AlbZaDay = daystart
 			gs 'stat'
-			'You have written and signed statement to the captain, and then he let go of you.'
+			'You have written and signed a statement for the captain, and then he let you go free.'
 
 			act 'Escape.':gt 'gorodok'
 		end
@@ -25,7 +25,7 @@ $din_zajava_albfather_no2 = {
 		minut += 1
 		AlbFather = -1
 		gs 'stat'
-		'You resolutely refused to write a statement to the captain. Captain sighed sadly, "I see. You currently have acquired powerful enemies girl."'
+		'You resolutely refused to write a statement for the captain. The captain sighed sadly, "I see. You just made powerful enemies girl."'
 
 		act 'Warn Albina':
 			cls
@@ -33,7 +33,7 @@ $din_zajava_albfather_no2 = {
 			AlbFrend = 1
 			ZvezdEnd = 1
 			gs 'stat'
-			'You quickly dialed the number and Albina told her what had happened. Albina said thoughtfully thank you and hung up.'
+			'You quickly dialed Albina's number and  told her what had happened. Albina remained thoughtful for a few seconds, then whispered “thank you” and hung up.'
 
 			act 'Escape':gt 'gorodok'
 		end
@@ -41,18 +41,20 @@ $din_zajava_albfather_no2 = {
 }
 
 $din_zajava_albfather_no = {
-	act 'Don''t write a statement':
+	act 'Uncertain whether to write a statement or not':
 		cls
 		minut += 1
 		gs 'stat'
-		'You refused to write a statement and the captain began to persuade you. "Think about the consequences. Albina not you pass, so somebody else, in the end we ourselves can take it easy now. Lack of evidence."'
+		'You weren't sure you wanted to write a statement,so the captain began to persuade you. "Think about the consequences. Albina will not take the blame, she could claim that all of this was your doing alone. In the end we will get to the bottom of this ourselves and  have the entire team arrested. Or we can take it easy now and let you go for lack of evidence if you cooperate."
+'
 
 		if intel >= 80:
 			act 'Ask him why you should tell him anything':
 				cls
 				minut += 1
 				gs 'stat'
-				'You asked the captain if they all so good, then why are you thio them. The captain replied, "Frankly, it''s not our jurisdiction, and to act without direct application dangerous Barlovskogo we can and push, but we may not be pleasant consequences. A statement is a guarantee of success of the operation."'
+				'You asked the captain if they have proof of Albina breaking the law, then what are you doing here with them. The captain replied thoughtfully, "Frankly, this case is not in our jurisdiction, and to act without direct evidence will be very dangerous .While we can  push and try to get a conviction, we may not get the results we are looking for. A statement would be a guarantee of success for the operation."
+'
 				dynamic $din_zajava_albfather
 				dynamic $din_zajava_albfather_no2
 			end
@@ -64,36 +66,36 @@ $din_zajava_albfather_no = {
 }
 
 gs 'stat'
-'Suddenly stops the car next to you. It comes from a man in a nice suit and suitable for you. He pulls out of Corman''s license and opened it seems. "Captain Chernov. State Security Service." You surprise spotted documents all true identity now. You said in surprise, "Why I needed you? Here what that mistake." Captain confident tone Chernov told you "No mistake, you <<$name>> <<$surname>>, let''s step aside and talk."'
+'You are taking a stroll down a road. Suddenly a car stops next to you. Out of it comes a man in a nice suit and walks towards you. He pulls out a badge and opened it for you to see. "Captain Chernov. State Security Service."With surprise you check his badge and realize its authentic. You said in shock, "What do you want from me? This must be a mistake. I've done nothing wrong " With the confident tone of a state captain, Chernov replied "No mistake, you are <<$name>> <<$surname>>, let''s step aside and talk."'
 act 'Move with Chernov':
 	cls
 	minut += 1
 	gs 'stat'
-	'You walked away with Captain Chernov. Along the way, you notice how it sticks armpit holster with gun. Ogladevshis Chernov begins "<<$name>>. I know that you are new to the team Zvezdushki. Just know anything but this team has been dancing. Zvezdushkam will end soon, with your help or without your help. It''s not even so important, what is important when case will be in motion, the whole town will know what you did in this team. And not even so important, engaged or not, but will not stop the gossip. give you a big fine, inform parents, school, put on record with the police. But all this can be avoided. "'
+	'You walked away with Captain Chernov. Along the way, you noticed that sticking under his armpit was a holster with a gun. In a serious tone Chernov begun speaking "<<$name>>. I know that you are new to the team of Zvezdushki. I know this team is about much more than just dancing. The Zvezdushki will fall soon, with or without your help. It''s not even so important that you help, what is important is that once the case goes in motion, the whole town will know what you did with this team. Even if you didn't have an important role in it, and didn't do anything improper, that will not stop the gossip. You will be given a big fine,we will inform your parents, your school, and it will be put on your record with the police. But all of this can be avoided. "'
 
-	act 'Ask him how to avoid it':
+	act 'Ask him how you can avoid it':
 		cls
 		minut += 1
 		gs 'stat'
 
-		if age < 18:'You asked the captain Chernov as possible to avoid publicity and consequences. Captain Chernov said to you "You write to the security service that Albina Barlovskaya entices you into prostitution. Besides you are underage. This extra trouble for Albina."'
+		if age < 18:'You asked captain Chernov if it was possible to avoid publicity and the consequences that would follow. Captain Chernov turned to you and said "We could work something out. If you write to the security service claiming that Albina Barlovskaya enticed you into prostitution. After all you are an underage. This will be real trouble for Albina."'
 		if age >= 18:'You asked the captain Chernov as possible to avoid publicity and consequences. Captain Chernov said to you "You write to the security service that Albina Barlovskaya entices you into prostitution."'
 
-		'Captain Chernov paused, giving you time to think and continued. "If you write an application, you will be charged as the victim, no publicity will not. Actually, and no matter what will not write a statement. Next''ll have this thing in me."'
+		' Captain Chernov paused, giving you time to think it over before he continued. "If you sign a statement, you will be charged as the victim, not an accomplice and your name will not be given to publicity. Actually, you don't even have to send an application. Just make a statement and I’ll take care of the rest. Next time we meet I can have the papers with me."'
 
 		if intel >= 70:
-			act 'Ask him why a security service is engaged instead of the police':
+			act 'Ask him why the security service is involved in this instead of the police':
 				cls
 				minut += 1
 				gs 'stat'
-				'You asked what is so important in Albina, she took not the police and security service. Captain bad grinned "I underestimated you, you''re a smart girl. Okay, I''ll play in the open. You know who the father of Albina? Barlovsky Boris, a retired police colonel. He served as chief of police in this town. Suppose he is retired now, but it had great communication with the police. "'
+				'You asked what was so important about Albina, that had the security service searching this case instead of the police. The captain grinned and replied "I underestimated you, you''re a smart girl. Okay, I''ll be straight with you .  Do you know who Albina's father is? He is Barlovsky Boris, a retired police colonel. He served as chief of the police in this very town. He is supposed to be retired now, but still has a great many connections with the police. "'
 
 				if intel >= 75:
-					act 'Tell him that he didn''t answered your question':
+					act 'Tell him that he still hadn't answered your question':
 						cls
 						minut += 1
 						gs 'stat'
-						'You told the captain that he did not answer the question, why now suddenly interested in the affairs of Albina why security service. The captain nodded, "It''s very simple. Albina''s father decided to go into politics and become the mayor of the town. There are certain forces that want to stop him. What could be better daughter criminals engaged in a brothel."'
+						'You told the captain that he still had not answered your question, why now the sudden interest in the affairs of Albina from the security service. The captain nodded, "It's very simple. Albina's father decided to go into politics and is running for mayor of this town. There are certain 'elements' that want to stop him. What better way than arresting his daughter as a criminal engaged in a prostitution."'
 						dynamic $din_zajava_albfather
 						dynamic $din_zajava_albfather_no
 					end
